@@ -1,0 +1,19 @@
+.icon {
+	width: 25px;
+	height: 25px;
+	color: #fff;
+
+	&-logo {
+		width: 146px;
+		height: 24px;
+		color: var(--primary-color-400);
+	}
+
+	&-social {
+		transition: color 0.3s;
+	}
+
+	&[data-logo="footer-navigation"] {
+		color: #fff;
+	}
+}

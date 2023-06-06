@@ -1,0 +1,66 @@
+@use "../utils/variables";
+
+.grid-columns {
+	display: grid;
+	gap: 10em;
+
+	&:has(.hero-columns) {
+		grid-template-areas:
+			"heroColumn1"
+			"heroColumn2";
+		gap: 0 10em;
+	}
+}
+
+.carousel-grid-columns {
+	display: grid;
+}
+
+.footer-grid-columns {
+	display: grid;
+	gap: 5em;
+	grid-auto-flow: column;
+	grid-template-rows: auto 1fr 0.5fr;
+	grid-template-areas:
+		"footerNewsletter"
+		"footerNav"
+		"footerCompanyInfo";
+}
+
+@media (min-width: variables.$tablet-breakpoint) {
+	.grid-columns {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+
+		&:has(.about-section) {
+			grid-auto-flow: row;
+			grid-template-columns: 0.7fr 1fr;
+		}
+	}
+
+	.footer-grid-columns {
+		grid-template-rows: auto;
+		grid-template-areas:
+			"footerCompanyInfo footerNav"
+			"footerNewsletter  footerNewsletter";
+	}
+}
+
+@media (min-width: variables.$tablet-breakpoint) {
+	.grid-columns {
+		&:has(.hero-columns) {
+			grid-template-areas: "heroColumn2 heroColumn1";
+		}
+	}
+}
+
+@media (min-width: variables.$desktop-breakpoint) {
+	.grid-columns {
+		&:has(.about-section) {
+			gap: 20em;
+		}
+	}
+	.footer-grid-columns {
+		grid-template-areas: "footerCompanyInfo footerNav footerNewsletter";
+	}
+}

@@ -1,0 +1,13 @@
+@use "../utils/variables";
+
+article,
+header,
+footer {
+	padding: 6em 0;
+}
+
+@media (max-width: variables.$desktop-breakpoint) {
+	.footer {
+		padding: 4.8em 0 0;
+	}
+}

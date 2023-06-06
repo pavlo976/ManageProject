@@ -1,0 +1,45 @@
+// css variables
+
+:root {
+	--accent-color-10: hsl(0, 0%, 100%);
+	--accent-color-100: hsl(13, 100%, 96%);
+	--accent-color-400: hsl(12, 88%, 59%);
+	--accent-color-500: hsl(4, 90%, 58%);
+
+	--accent-color-100-dark: hsl(7, 32%, 89%);
+	--accent-color-400-light: hsl(12, 87%, 69%);
+	--accent-color-400-super-light: hsl(12, 87%, 93%);
+
+	--primary-color-400: hsl(228, 39%, 23%);
+
+	--neutral-color-100: hsl(232, 12%, 13%);
+	--neutral-color-900: hsl(0, 0%, 0%);
+	--neutral-color-900-light: hsl(0, 0%, 96%);
+
+	--font-family-primary: "Be Vietnam Pro", sans-serif;
+
+	--font-family-body: var(--font-family-primary);
+	--font-family-heading: var(--font-family-primary);
+
+	--font-weight-regular: 400;
+	--font-weight-semi-bold: 500;
+	--font-weight-bold: 700;
+
+	--font-size-400: clamp(1.6rem, 2.5vw, 1.8rem);
+	--font-size-500: clamp(2rem, 2.5vw, 2.4rem);
+	--font-size-600: clamp(2.4rem, 2.5vw, 2.8rem);
+	--font-size-700: clamp(3rem, 3vw, 4rem);
+	--font-size-800: clamp(3.7rem, 4.5vw, 6rem);
+
+	--font-size-primary-heading: var(--font-size-800);
+	--font-size-secondary-heading: var(--font-size-700);
+	--font-size-third-heading: var(--font-size-600);
+	--font-size-nav: var(--font-size-400);
+	--font-size-button: var(--font-size-400);
+}
+
+// sass variables
+
+$mobile-breakpoint: 31.25em;
+$tablet-breakpoint: 43.75em;
+$desktop-breakpoint: 64.375em;

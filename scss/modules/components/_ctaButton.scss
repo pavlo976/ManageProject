@@ -1,0 +1,39 @@
+@use "../utils/variables";
+
+.cta-button {
+	padding: 1em 2em;
+	border-radius: 100vmax;
+	background-color: var(--accent-color-400);
+	color: var(--accent-color-100);
+
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-button);
+	box-shadow: 0 1.25em 1em -1em var(--accent-color-400);
+	transition: background-color 0.4s;
+
+	&:hover,
+	&:focus-visible {
+		background-color: var(--accent-color-400-light);
+	}
+}
+
+.cta-button-desktop {
+	display: none;
+}
+
+.cta-button-mobile {
+	margin-top: 2em;
+	transform: scale(0);
+	transition: transform 0.3s;
+}
+
+.cta-button-mobile.active {
+	transform: scale(1);
+	display: block;
+}
+
+@media (min-width: variables.$desktop-breakpoint) {
+	.cta-button-desktop {
+		display: block;
+	}
+}

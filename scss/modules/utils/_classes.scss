@@ -1,0 +1,36 @@
+@use "../utils/variables";
+
+.inverted {
+	background-color: var(--accent-color-100);
+	color: var(--accent-color-400);
+}
+
+.mt-10 {
+	margin-top: 10em;
+}
+
+.mt-5 {
+	margin-top: 5em;
+}
+
+.mb-2 {
+	margin-bottom: 2em;
+}
+
+.max-width-80 {
+	max-width: 80%;
+}
+
+.flow > * + * {
+	margin-top: 4.5rem;
+}
+
+.flow[data-spacing="tight"] > * + * {
+	margin-top: 1em;
+}
+
+@media (max-width: variables.$tablet-breakpoint) {
+	.mb-2-tablet {
+		margin-bottom: 2em;
+	}
+}

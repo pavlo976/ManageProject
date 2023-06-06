@@ -1,0 +1,47 @@
+@use "../utils/variables";
+
+.flex-row {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 2.5em;
+}
+
+.flex-nav-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.grid-rows {
+	display: grid;
+	place-items: center;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: grid-template-rows 0.3s;
+
+	& > * {
+		overflow: hidden;
+	}
+
+	&.active {
+		grid-template-rows: 1fr;
+	}
+
+	&:has(.nav__list--mobile) {
+		background-color: #fff;
+		border-radius: 10px;
+	}
+
+	&:is(.active) {
+		div {
+			padding: 6em;
+		}
+	}
+}
+
+@media (min-width: variables.$mobile-breakpoint) {
+	.flex-row {
+		flex-direction: row;
+	}
+}

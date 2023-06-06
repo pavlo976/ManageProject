@@ -1,0 +1,16 @@
+body {
+	position: relative;
+	font-family: var(--font-family-body);
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	color: var(--primary-color-400);
+	overflow-x: hidden;
+}
+
+body.scrollbar-hidden {
+	overflow: hidden;
+}
+
+a[aria-label="logo"] {
+	display: inline-block;
+}

@@ -1,0 +1,23 @@
+@use "../utils/variables";
+
+.wrapper {
+	position: relative;
+	padding: 0 clamp(4em, 8vw, 6em);
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	&:is(.flex-nav-row) {
+		padding: 0 clamp(2em, 6vw, 4em);
+	}
+}
+
+.nav-desktop-wrapper {
+	display: none;
+}
+
+@media (min-width: variables.$desktop-breakpoint) {
+	.nav-desktop-wrapper {
+		display: flex;
+	}
+}

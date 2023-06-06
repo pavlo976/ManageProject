@@ -1,0 +1,102 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+img,
+picture,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-padding-top: 95px;
+	scroll-behavior: smooth;
+}
+
+// html:focus-within {
+// 	scroll-behavior: smooth;
+// }
+
+ol,
+ul {
+	list-style-type: none;
+}
+
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+}
+
+/////////////////////
+// Outline only for keyboards
+
+button:where(:not(:focus-visible)) {
+	cursor: pointer;
+	transition: all 0.2s;
+	border: 1px solid transparent;
+}
+
+button:focus-visible {
+	border: 1px solid #000;
+}
+
+input:where(:not(:focus-visible)) {
+	outline: 1px solid transparent;
+}
+
+input:focus-visible {
+	outline: 1px solid #000;
+}
+
+// input {
+// 	width: 100%;
+// }
+
+/////////////////////
+/////////////////////
+
+a {
+	text-decoration: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

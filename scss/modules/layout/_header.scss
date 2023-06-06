@@ -1,0 +1,84 @@
+@use "../utils/variables";
+
+.hero {
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		width: 100%;
+		aspect-ratio: 1 / 1.2;
+		background-image: url("../images/bg-tablet-pattern.svg");
+		background-repeat: no-repeat;
+		background-position: 50px -400px;
+	}
+}
+
+.hero-columns {
+	display: grid;
+	grid-area: heroColumn2;
+
+	&__btn {
+		justify-self: center;
+	}
+}
+
+.hero-column {
+	grid-area: heroColumn1;
+
+	&__title,
+	&__text {
+		text-align: center;
+	}
+
+	&__title {
+		font-size: var(--font-size-primary-heading);
+		line-height: 1.3;
+	}
+
+	&__text {
+		font-size: var(--font-size-500);
+	}
+
+	&__img {
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+@media (min-width: variables.$mobile-breakpoint) {
+	.hero {
+		&::before {
+			background-position: 150px -200px;
+		}
+	}
+}
+
+@media (min-width: variables.$tablet-breakpoint) {
+	.hero {
+		&::before {
+			background-position: 450px -200px;
+		}
+	}
+
+	.hero-columns {
+		&__btn {
+			justify-self: start;
+		}
+	}
+
+	.hero-column {
+		&__title,
+		&__text {
+			text-align: left;
+		}
+	}
+}
+
+@media (min-width: variables.$desktop-breakpoint) {
+	.hero {
+		&::before {
+			background-position: 900px -200px;
+		}
+	}
+}

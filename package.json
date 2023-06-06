@@ -1,0 +1,27 @@
+{
+    "name": "css_quick",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "parcel-build": "parcel build index.html",
+        "parcel-start": "parcel index.html"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "core-js": "^3.30.1",
+        "lodash-es": "^4.17.21",
+        "regenerator-runtime": "^0.13.11"
+    },
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.8.3",
+        "eslint": "^8.38.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-prettier": "^4.2.1",
+        "parcel": "^2.8.3",
+        "prettier": "^2.8.7"
+    }
+}
